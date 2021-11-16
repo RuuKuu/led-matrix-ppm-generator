@@ -23,7 +23,7 @@ if all([0 <= x <= 255 for x in color_value]):
   create_ppm(file_name, text, text_r, text_g, text_b, bg_r, bg_g, bg_b)
   print("succeeded. The ppm file has been generated.")
 
-  choice = input("Please respond with 'yes' or 'no' [y/N]: ").lower()
+  choice = input("Do you want to merge? [y/N]: ").lower()
   if choice in ['y', 'ye', 'yes']:
     merge_ppm()
     print("succeeded. The ppm file has been merged.")
@@ -33,6 +33,6 @@ if all([0 <= x <= 255 for x in color_value]):
   else:
     print("The ppm files were not merged.")
     sys.exit()
-    
+
 else:
   print("Failed. You entered a value that is invalid. RGB must be between 0 and 255.")
