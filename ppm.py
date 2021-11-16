@@ -17,8 +17,8 @@ def merge_ppm():
   DIR = "./ppm_files/"
   number_of_files = sum(os.path.isfile(os.path.join(DIR, name)) for name in os.listdir(DIR))
 
-  shutil.copy("./ppm_files/snd_lab.ppm", "./ppm_files/merged.ppm")
-  shutil.copy("./png_files/snd_lab.png", "./png_files/merged.png")
+  shutil.copy("./ppm_files/0.ppm", "./ppm_files/merged.ppm")
+  shutil.copy("./png_files/0.png", "./png_files/merged.png")
 
   for i in range(number_of_files - 2):
     img1 = Image.open("./ppm_files/" + "merged" + ".ppm")
