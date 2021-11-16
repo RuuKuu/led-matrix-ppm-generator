@@ -14,17 +14,18 @@ def create_ppm(file_name, text, text_r, text_g, text_b, bg_r, bg_g, bg_b):
   img.save("./png_files/" + str(file_name) + ".png")
 
 def merge_ppm():
-  DIR = "./ppm_files/"
-  number_of_files = sum(os.path.isfile(os.path.join(DIR, name)) for name in os.listdir(DIR))
-
   shutil.copy("./ppm_files/0.ppm", "./ppm_files/merged.ppm")
   shutil.copy("./png_files/0.png", "./png_files/merged.png")
 
-  for i in range(number_of_files - 2):
+  DIR = "./ppm_files/"
+  number_of_files = sum(os.path.isfile(os.path.join(DIR, name)) for name in os.listdir(DIR))
+
+
+  for i in range(1, number_of_files - 1):
     img1 = Image.open("./ppm_files/" + "merged" + ".ppm")
     img2 = Image.open("./ppm_files/" + str(i) + ".ppm")
 
-    if i == (number_of_files - 3):
+    if i == (number_of_files - 2):
       img = Image.new("RGB", (img1.width + 100 + img2.width + 100, img1.height))
       img.paste(img1, (0, 0))
       img.paste(img2 , (100 + img1.width, 0))
