@@ -1,15 +1,18 @@
 import sys
 from ppm import create_ppm
 
-file_name = input("Enter file name: ")
-text = input("Enter text you want to display: ")
 try:
+  file_name = input("Enter file name: ")
+  text = input("Enter text you want to display: ")
   text_r = int(input("Enter the red value of the text: "))
   text_g = int(input("Enter the green value of the text: "))
   text_b = int(input("Enter the blue value of the text: "))
   bg_r = int(input("Enter the red value of the background: "))
   bg_g = int(input("Enter the green value of the background: "))
   bg_b = int(input("Enter the blue value of the background: "))
+except KeyboardInterrupt:
+  print("\n")
+  sys.exit()
 except:
   print("Failed. You entered a value that is invalid. RGB must be a number.")
   sys.exit()
