@@ -2,11 +2,11 @@ import os
 import shutil
 from PIL import Image, ImageFont, ImageDraw
 
-def create_ppm(file_name, text, text_r, text_g, text_b, bg_r, bg_g, bg_b):
-  font = ImageFont.truetype("/usr/share/fonts/truetype/fonts-japanese-gothic.ttf", 16)
+def create_ppm(file_name, text="表示システムエラー", text_size = 16, text_r=255, text_g=255, text_b=255, bg_r=0, bg_g=0, bg_b=0):
+  font = ImageFont.truetype("/usr/share/fonts/truetype/fonts-japanese-gothic.ttf", text_size)
   width, height = font.getsize(text)
   
-  img = Image.new("RGB", (width, 16), (bg_r, bg_g, bg_b))
+  img = Image.new("RGB", (width, text_size), (bg_r, bg_g, bg_b))
   draw = ImageDraw.Draw(img)
   draw.text((0, 0), text, (text_r, text_g, text_b), font=font)
 
