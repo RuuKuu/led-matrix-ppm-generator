@@ -9,7 +9,7 @@ for i, entry in enumerate(d.entries):
   else:
     titles += "   " + entry.title
 
-titles = titles + "           "
+titles = "        " + titles + "           "
 
-create_ppm("2_0_YahooNews", titles, 20, 0, 0, 255, 0, 0, 0)
+create_ppm("2_0_YahooNews", titles, 20, 255, 0, 255, 0, 0, 0)
 #merge_ppm()
