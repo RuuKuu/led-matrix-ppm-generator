@@ -10,8 +10,10 @@ def create_ppm(file_name, text="表示システムエラー", text_size = 16, te
   draw = ImageDraw.Draw(img)
   draw.text((0, 0), text, (text_r, text_g, text_b), font=font)
 
-  img.save("./ppm_files/" + str(file_name) + ".ppm")
-  img.save("./png_files/" + str(file_name) + ".png")
+  IMAGE_DIR_PASS = "/home/pi/ElectricBoardContentsFolder/"
+
+  img.save(IMAGE_DIR_PASS + str(file_name) + ".ppm")
+  img.save(IMAGE_DIR_PASS + "png_files/" + str(file_name) + ".png")
 
 def merge_ppm():
   shutil.copy("./ppm_files/0.ppm", "./ppm_files/merged.ppm")
