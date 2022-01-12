@@ -13,7 +13,7 @@ for i, news_title in enumerate(news_titles):
   else:
     titles += "   " + news_title.get_text()
   
-  titles = "           " +titles + "           "
+  titles = "    " +titles + "           "
 
-create_ppm("1_0_KosenNews", titles, 20, 255, 255, 255, 0, 0, 0)
+create_ppm("Line2/1_0_KosenNews", titles, 20, 255, 255, 255, 0, 0, 0)
 #merge_ppm()

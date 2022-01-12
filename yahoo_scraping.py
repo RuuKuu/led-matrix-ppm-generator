@@ -11,5 +11,5 @@ for i, entry in enumerate(d.entries):
 
 titles = "        " + titles + "           "
 
-create_ppm("2_0_YahooNews", titles, 20, 255, 0, 255, 0, 0, 0)
+create_ppm("Line2/2_0_YahooNews", titles, 20, 255, 0, 255, 0, 0, 0)
 #merge_ppm()
