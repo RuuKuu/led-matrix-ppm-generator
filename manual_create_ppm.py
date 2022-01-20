@@ -14,7 +14,7 @@ class ManualCreatePPM:
       text_b = int(input("文字色の「青」の値を入力してください: "))
       bg_r = int(input("背景色の「赤」の値を入力してください: "))
       bg_g = int(input("背景色の「緑」の値を入力してください: "))
-      bg_b = int(input("背景色の「緑」の値を入力してください: "))
+      bg_b = int(input("背景色の「青」の値を入力してください: "))
     except KeyboardInterrupt:
       print("\n")
       sys.exit()
@@ -24,9 +24,11 @@ class ManualCreatePPM:
 
     color_value = [text_r, text_g, text_b, bg_r, bg_g, bg_b]
 
-    if show_no not in [1,2]:
+    if show_line not in [1, 2]:
       print("表示行は1か2で選択してください")
       sys.exit()
+    else:
+      pass
 
     if all([0 <= x <= 255 for x in color_value]):
       ob = CreatePPM()
